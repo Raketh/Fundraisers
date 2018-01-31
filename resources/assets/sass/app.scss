@@ -1,0 +1,56 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+@import "variables";
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.checked {
+  color: orange;
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+.selectStar {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+}
+
+.selectStar input[type=radio] {
+  display: none;
+}
+
+.selectStar input[type=radio] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+
+}
+
+/* unchecked icon */
+
+.selectStar input[type=radio] + label:before {
+
+  content: "\f006";
+  font-size: 2em;
+  color: orange;
+
+}
+
+/* checked icon */
+.selectStar > input[type=radio] + label:hover:before,
+.selectStar > input[type=radio] + label:hover ~ input[type=radio] + label:before {
+  content: "\f005";
+  font-size: 2em;
+  color: orange;
+}
+
+.selectStar > input[type=radio]:checked + label:before,
+.selectStar > input[type=radio]:checked + label ~ input[type=radio] + label:before {
+  content: "\f005";
+  font-size: 2em;
+  color: orange;
+}
+
